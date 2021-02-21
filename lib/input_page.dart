@@ -18,10 +18,7 @@ const inactiveCardColor = Color(0xFF111328);
 const bottomContainerHeight = 80.0;
 const bottomContainerColor = Color(0xFFEB1555);
 class _InputPageState extends State<InputPage> {
-  Color maleCardColor = inactiveCardColor;
-  Color femaleCardColor = inactiveCardColor;
   Gender selectedGender;
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
