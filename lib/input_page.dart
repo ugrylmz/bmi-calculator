@@ -4,6 +4,8 @@ import 'reusable_card.dart';
 import 'icon_content.dart';
 import 'constants.dart';
 import 'results_page.dart';
+import 'bottomButton.dart';
+import 'roundIcon.dart';
 
 class InputPage extends StatefulWidget {
   @override
@@ -218,63 +220,15 @@ class _InputPageState extends State<InputPage> {
               ],
             ),
           ),
-          GestureDetector(
+          BottomButton(
+            buttonTitle: 'CALCULATE YOUR BMI',
             onTap: () {
               Navigator.push(context,
                   MaterialPageRoute(builder: (context) => ResultsPage()));
             },
-            child: Container(
-              height: kBottomContainerHeight,
-              width: double.infinity,
-              color: kBottomContainerColor,
-              margin: EdgeInsets.only(top: 10.0),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: <Widget>[
-                  Icon(
-                    FontAwesomeIcons.calculator,
-                    size: 30.0,
-                    color: Colors.white,
-                  ),
-                  SizedBox(
-                    width: 10.0,
-                  ),
-                  Text(
-                    'CALCULATE YOUR BMI',
-                    style: TextStyle(fontSize: 25),
-                  ),
-                ],
-              ),
-            ),
-          )
+          ),
         ],
       ),
-    );
-  }
-}
-
-class RoundIconButton extends StatelessWidget {
-  RoundIconButton({this.icon, this.onPress});
-
-  final IconData icon;
-  final Function onPress;
-
-  @override
-  Widget build(BuildContext context) {
-    return RawMaterialButton(
-      child: Icon(
-        icon,
-        color: Colors.white,
-      ),
-      onPressed: onPress,
-      elevation: 0.0,
-      constraints: BoxConstraints.tightFor(
-        height: 56.0,
-        width: 56.0,
-      ),
-      shape: CircleBorder(),
-      fillColor: Color(0xFF4C4F5E),
     );
   }
 }
