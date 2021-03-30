@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'reusable_card.dart';
-import 'icon_content.dart';
-import 'constants.dart';
+import '../components/reusable_card.dart';
+import '../components/icon_content.dart';
+import '../constants.dart';
 import 'results_page.dart';
-import 'bottomButton.dart';
-import 'roundIcon.dart';
+import '../components/bottomButton.dart';
+import '../components/roundIcon.dart';
 
 class InputPage extends StatefulWidget {
   @override
